@@ -1,1 +1,39 @@
-{     "devDependencies": {         "msgpack-lite": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmdoc-msgpack-lite",     "homepage": "https://github.com/npmdoc/node-npmdoc-msgpack-lite",     "repository": {         "type": "git",         "url": "https://github.com/npmdoc/node-npmdoc-msgpack-lite.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### api documentation for  [msgpack-lite (v0.1.26)](https://github.com/kawanet/msgpack-lite)  [![npm package](https://img.shields.io/npm/v/npmdoc-msgpack-lite.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-msgpack-lite) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-msgpack-lite.svg)](https://travis-ci.org/npmdoc/node-npmdoc-msgpack-lite)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "msgpack-lite": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-msgpack-lite",
+    "keywords": [
+        "documentation",
+        "msgpack-lite"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_msgpack_lite.js",
+    "name": "npmdoc-msgpack-lite",
+    "nameAlias": "npmdoc_msgpack_lite",
+    "nameOriginal": "npmdoc-msgpack-lite",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-msgpack-lite.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
